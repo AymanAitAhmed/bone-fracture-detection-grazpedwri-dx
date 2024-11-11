@@ -20,15 +20,12 @@ Pediatric wrist fractures are among the most common injuries, and rapid, accurat
 
 ## Image Preprocessing
 
-In order to compare the effect that each technique has on the results of training we will be applying a pipeline that consists of the original images that each have different dimensions, after this we take each one of the images and apply the letterboxing technique on them to obtain an images that all have the same dimensions which are 640x640px, furthermore we will take three copies of all the 20327 images and for the first copy we leave them as they are so that we use them as reference, for the second copy we will apply the advanced histogram equalization(AHE) technique:
+To maximize model performance and enhance the visibility of fracture details, we applied various image transformations, including:
+- **HE** (Histogram Equalization)
 <img src="https://github.com/AymanAitAhmed/bone-fracture-detection-grazpedwri-dx/blob/main/images/wrist_xray_HE.png">
 
-For the last copy we will apply the contrast limited adaptive histogram equalization(CLAHE):
+- contrast limited adaptive histogram equalization(CLAHE):
 <img src="https://github.com/AymanAitAhmed/bone-fracture-detection-grazpedwri-dx/blob/main/images/wrist_xray_CLAHE.png">
-
-In the end we will train the yolo model on each copy of the three copy and compare the results.
-This a diagram that illustrates the pipeline processes:
-<img src="https://github.com/AymanAitAhmed/bone-fracture-detection-grazpedwri-dx/blob/main/images/bone%20pipeline.png">
 
 ### Libraries Used
 
